@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-# AVANTASOMMER PUSH SCRIPT for avantasommer-core
+# AVANTASOMMER CORE GITHUB PUSH SCRIPT
+# This script initializes the avantasommer-core repo and pushes to GitHub
+
 echo "Initializing avantasommer-core..."
 
 git init
-git remote add origin git@github.com:avantasommer-org/avantasommer-core.git
+git remote origin git@github.com:avantasommerorg/avantasommer-core.git
 git add .
 git commit -m "Initial commit from Avanta"
 git branch -M main
