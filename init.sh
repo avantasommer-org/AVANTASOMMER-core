@@ -5,7 +5,7 @@
 echo "Initializing avantasommer-core..."
 
 git init
-git remote origin git@github.com:avantasommerorg/avantasommer-core.git
+git remote add origin git@github.com:avantasommerorg/avantasommer-core.git
 git add .
 git commit -m "Initial commit from Avanta"
 git branch -M main
