@@ -5,10 +5,18 @@
 echo "Initializing avantasommer-core..."
 
 git init
-git remote add origin git@github.com:avantasommerorg/avantasommer-core.git
+
+# Check if the remote 'origin' already exists
+if git remote | grep -q origin; then
+  echo "Remote 'origin' already exists. Pulling latest changes..."
+  git pull origin main --rebase
+else
+  git remote add origin git@github.com:avantasommerorg/avantasommer-core.git
+fi
+
 git add .
 git commit -m "Initial commit from Avanta"
 git branch -M main
-git push -u origin main
+git push -u origin main || echo "❌ Failed to push. Please resolve conflicts and try again."
 
 echo "✅ Pushed avantasommer-core"
